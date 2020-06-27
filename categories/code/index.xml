@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code on CALVIN BLOG</title>
-    <link>https://example.com/categories/code/</link>
+    <link>https://calvinwan0101.github.io/categories/code/</link>
     <description>Recent content in code on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/categories/code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calvinwan0101.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>English Test</title>
-      <link>https://example.com/blog/aritcletest/</link>
+      <link>https://calvinwan0101.github.io/blog/aritcletest/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/blog/aritcletest/</guid>
+      <guid>https://calvinwan0101.github.io/blog/aritcletest/</guid>
       <description>ABOUT THE SPEAKER Mitch Resnick · Computer scientist Mitch Resnick directs the Lifelong Kindergarten group at MIT Media Lab, dedicated to helping kids of all ages tinker and experiment with design.
 Coding isn’t just for computer whizzes, says Mitch Resnick of MIT Media Lab – it’s for everyone. In a fun, demo-filled talk Resnick outlines the benefits of teaching kids to code, so they can do more than just use new tech toys but also create them.</description>
     </item>

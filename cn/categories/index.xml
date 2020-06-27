@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CALVIN BLOG</title>
-    <link>https://example.com/cn/categories/</link>
+    <link>https://calvinwan0101.github.io/cn/categories/</link>
     <description>Recent content in Categories on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/cn/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calvinwan0101.github.io/cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>syntax</title>
-      <link>https://example.com/cn/categories/syntax/</link>
+      <link>https://calvinwan0101.github.io/cn/categories/syntax/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/categories/syntax/</guid>
+      <guid>https://calvinwan0101.github.io/cn/categories/syntax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://example.com/cn/categories/themes/</link>
+      <link>https://calvinwan0101.github.io/cn/categories/themes/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/categories/themes/</guid>
+      <guid>https://calvinwan0101.github.io/cn/categories/themes/</guid>
       <description></description>
     </item>
     

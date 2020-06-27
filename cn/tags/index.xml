@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CALVIN BLOG</title>
-    <link>https://example.com/cn/tags/</link>
+    <link>https://calvinwan0101.github.io/cn/tags/</link>
     <description>Recent content in Tags on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/cn/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calvinwan0101.github.io/cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>css</title>
-      <link>https://example.com/cn/tags/css/</link>
+      <link>https://calvinwan0101.github.io/cn/tags/css/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/tags/css/</guid>
+      <guid>https://calvinwan0101.github.io/cn/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://example.com/cn/tags/html/</link>
+      <link>https://calvinwan0101.github.io/cn/tags/html/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/tags/html/</guid>
+      <guid>https://calvinwan0101.github.io/cn/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://example.com/cn/tags/markdown/</link>
+      <link>https://calvinwan0101.github.io/cn/tags/markdown/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/tags/markdown/</guid>
+      <guid>https://calvinwan0101.github.io/cn/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://example.com/cn/tags/themes/</link>
+      <link>https://calvinwan0101.github.io/cn/tags/themes/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/cn/tags/themes/</guid>
+      <guid>https://calvinwan0101.github.io/cn/tags/themes/</guid>
       <description></description>
     </item>
     

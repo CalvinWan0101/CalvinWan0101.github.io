@@ -3,207 +3,207 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/cn/blog/</loc>
+    <loc>https://calvinwan0101.github.io/cn/blog/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/blog/"
+                href="https://calvinwan0101.github.io/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/blog/"
+                href="https://calvinwan0101.github.io/tw/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/blog/"
+                href="https://calvinwan0101.github.io/cn/blog/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/</loc>
+    <loc>https://calvinwan0101.github.io/cn/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://calvinwan0101.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/"
+                href="https://calvinwan0101.github.io/tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/"
+                href="https://calvinwan0101.github.io/cn/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/categories/</loc>
+    <loc>https://calvinwan0101.github.io/cn/categories/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://calvinwan0101.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/categories/"
+                href="https://calvinwan0101.github.io/tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/categories/"
+                href="https://calvinwan0101.github.io/cn/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/css/</loc>
+    <loc>https://calvinwan0101.github.io/cn/tags/css/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/tags/css/"
+                href="https://calvinwan0101.github.io/tw/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/css/"
+                href="https://calvinwan0101.github.io/cn/tags/css/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/html/</loc>
+    <loc>https://calvinwan0101.github.io/cn/tags/html/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/tags/html/"
+                href="https://calvinwan0101.github.io/tw/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/html/"
+                href="https://calvinwan0101.github.io/cn/tags/html/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/markdown/</loc>
+    <loc>https://calvinwan0101.github.io/cn/tags/markdown/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/tags/markdown/"
+                href="https://calvinwan0101.github.io/tw/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/markdown/"
+                href="https://calvinwan0101.github.io/cn/tags/markdown/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/categories/syntax/</loc>
+    <loc>https://calvinwan0101.github.io/cn/categories/syntax/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/categories/syntax/"
+                href="https://calvinwan0101.github.io/tw/categories/syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/categories/syntax/"
+                href="https://calvinwan0101.github.io/cn/categories/syntax/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/</loc>
+    <loc>https://calvinwan0101.github.io/cn/tags/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://calvinwan0101.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/tags/"
+                href="https://calvinwan0101.github.io/tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/"
+                href="https://calvinwan0101.github.io/cn/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/themes/</loc>
+    <loc>https://calvinwan0101.github.io/cn/tags/themes/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/tags/themes/"
+                href="https://calvinwan0101.github.io/tw/tags/themes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/themes/"
+                href="https://calvinwan0101.github.io/cn/tags/themes/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/categories/themes/</loc>
+    <loc>https://calvinwan0101.github.io/cn/categories/themes/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/categories/themes/"
+                href="https://calvinwan0101.github.io/tw/categories/themes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/categories/themes/"
+                href="https://calvinwan0101.github.io/cn/categories/themes/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/blog/articletest/</loc>
+    <loc>https://calvinwan0101.github.io/cn/blog/articletest/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/blog/articletest/"
+                href="https://calvinwan0101.github.io/tw/blog/articletest/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/blog/articletest/"
+                href="https://calvinwan0101.github.io/cn/blog/articletest/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/about/</loc>
+    <loc>https://calvinwan0101.github.io/cn/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/about/"
+                href="https://calvinwan0101.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tw"
-                href="https://example.com/tw/about/"
+                href="https://calvinwan0101.github.io/tw/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/about/"
+                href="https://calvinwan0101.github.io/cn/about/"
                 />
   </url>
   
