@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on CALVIN BLOG</title>
-    <link>https://calvinwan0101.github.io/cn/blog/</link>
-    <description>Recent content in Blog on CALVIN BLOG</description>
+    <title>编程 on CALVIN BLOG</title>
+    <link>https://calvinwan0101.github.io/cn/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://calvinwan0101.github.io/cn/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calvinwan0101.github.io/cn/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
