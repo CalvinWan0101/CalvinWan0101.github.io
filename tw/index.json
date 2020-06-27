@@ -10,4 +10,10 @@
     "description": "About The Spaghetti Code",
     "body": "APCS(大學程式設計先修檢定)\n在APCS的觀念題中有一種很麻煩的題目是 code tracing\n一開始想說應該還好，畢竟也不是沒有看過別人的程式碼，應該跟著跑一次就好了\n天真如我\n一時找不到之前繞到頭暈掉的題目，隨便舉一個考古題的例子，還算簡單的\n若以F(15)呼叫右側F()函式，總共會印出幾行數字？\nvoid F(int n)\r{\rprintf(\u0026quot;%d\\n\u0026quot;,n);\rif(n%2==1)\u0026amp;\u0026amp;(n\u0026gt;1)\r{\rreturn F(5*n+1)\r}\relse\r{\rif(n%2==0)\rreturn F(n/2);\r}\r}\r解題思路：\n當函式輸進一個變數n,此時分為兩種狀況\n   n為偶數 回傳F(n/2)     n不為偶數 回傳F(5*n+1)    這時候n的變化如下\n   印出次數 此時的n值     01 15   02 76   03 38   04 19   05 96   06 48   07 24   08 12   09 06   10 03   11 16   12 08   13 04   14 02   15 01    Answer == 15\n全題考到的觀念只有\n 條件判斷 簡單的運算 函數  明明只是考三個很簡單的觀念卻硬要強行繞15次再問考生繞了幾次\n讓人不禁懷疑到底出這樣的題目對於程式能力的檢定是否真的有幫助?\n我記得我在APCS的社團有看過別人說：想要程式寫得好，請認真看APCS觀念題並引以為戒\n也有人說 APCS = A lot of Problems Caused by Spaghetti code\n至少在我少少的解題經驗中完全沒有用過這麼沒有邏輯的東西\n或者是這題\nint g1 = 30;\rint g2 = 20;\rint f1(int v)\r{\rint g1 = 10;\rreturn g1 + v;\r}\rint f2(int v)\r{\rint c = g2;\rv = v + c + g1;\rg1 = 10;\rc = 40;\rreturn v;\r}\rint main()\r{\rg2 = 0;\rg2 = f1(g2);\rprintf(\u0026quot;%d\u0026quot;, f2(f2(g2)));\r}\r很明顯這題考觀念有：\n 函數 變數形態(全域以及區域變數)  除了打算折磨考生的出題者，基本上沒有人寫程式會故意讓全域變數跟區域變數同名\n然後今年7月的APCS名額變少，報名的人好像有變多\n記錯日期的我只能放逐離島了QAQ OAO報不到本島啦 pic.twitter.com/t8toz2B8tR\n\u0026mdash; 肝臟爆破藝術家 (@CalvinWan0101) June 27, 2020  希望今年的觀念題可以順順利利的PASS :D\n",
     "ref": "/tw/blog/apcs/"
+  },{
+    "title": "Contact",
+    "date": "January 1, 0001",
+    "description": "",
+    "body": "",
+    "ref": "/tw/contact/"
   }]
