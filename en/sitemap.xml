@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://calvinwan0101.github.io/blog/article/</loc>
+    <loc>https://calvinwan0101.github.io/tags/apcs/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/tags/apcs/"
+                />
   </url>
   
   <url>
@@ -12,13 +27,13 @@
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/blog/"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/blog/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/blog/"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/blog/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -32,13 +47,13 @@
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -52,13 +67,13 @@
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/categories/"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/categories/"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -68,48 +83,48 @@
   </url>
   
   <url>
-    <loc>https://calvinwan0101.github.io/categories/code/</loc>
+    <loc>https://calvinwan0101.github.io/tags/code/</loc>
+    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/tags/code/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/categories/complain/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://calvinwan0101.github.io/blog/aritcletest/</loc>
+    <loc>https://calvinwan0101.github.io/blog/apcs/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/tags/funny/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/categories/life/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/categories/not-code/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/tags/not-funny/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/categories/not-life/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/tags/not-relax/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://calvinwan0101.github.io/tags/relax/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/blog/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/blog/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/blog/apcs/"
+                />
   </url>
   
   <url>
@@ -117,13 +132,13 @@
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/tags/"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/tags/"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -137,13 +152,13 @@
     <lastmod>2020-06-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/about/"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/about/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/about/"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/about/"
                 />
     <xhtml:link
                 rel="alternate"

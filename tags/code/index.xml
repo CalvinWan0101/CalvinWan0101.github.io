@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on CALVIN BLOG</title>
+    <link>https://calvinwan0101.github.io/tags/code/</link>
+    <description>Recent content in Code on CALVIN BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://calvinwan0101.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>complain about APCS</title>
+      <link>https://calvinwan0101.github.io/blog/apcs/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://calvinwan0101.github.io/blog/apcs/</guid>
+      <description>APCS(大學程式設計先修檢定)
+在APCS的觀念題中有一種很麻煩的題目是 code tracing
+一開始想說應該還好，畢竟也不是沒有看過別人的程式碼，應該跟著跑一次就好了
+天真如我
+一時找不到之前繞到頭暈掉的題目，隨便舉一個考古題的例子，還算簡單的
+若以F(15)呼叫右側F()函式，總共會印出幾行數字？
+void F(int n){printf(&amp;quot;%d\n&amp;quot;,n);if(n%2==1)&amp;amp;&amp;amp;(n&amp;gt;1){return F(5*n+1)}else{if(n%2==0)return F(n/2);}}解題思路：
+當函式輸進一個變數n,此時分為兩種狀況
+   n為偶數 回傳F(n/2)     n不為偶數 回傳F(5*n+1)    這時候n的變化如下
+   印出次數 此時的n值     01 15   02 76   03 38   04 19   05 96   06 48   07 24   08 12   09 06   10 03   11 16   12 08   13 04   14 02   15 01    Answer == 15</description>
+    </item>
+    
+  </channel>
+</rss>
