@@ -168,6 +168,61 @@
   </url>
   
   <url>
+    <loc>https://calvinwan0101.github.io/cn/blog/orgin/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/blog/orgin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/blog/orgin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/blog/orgin/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/cn/tags/%E6%95%85%E4%BA%8B/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/%E6%95%85%E4%BA%8B/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/%E6%95%85%E4%BA%8B/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/cn/categories/%E6%95%85%E4%BA%8B/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/categories/%E6%95%85%E4%BA%8B/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/categories/%E6%95%85%E4%BA%8B/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/cn/tags/%E9%97%B2%E8%81%8A/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://calvinwan0101.github.io/cn/contact/</loc>
     <xhtml:link
                 rel="alternate"

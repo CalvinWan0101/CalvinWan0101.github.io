@@ -168,6 +168,41 @@
   </url>
   
   <url>
+    <loc>https://calvinwan0101.github.io/tags/chat/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/blog/orgin/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/blog/orgin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/blog/orgin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/blog/orgin/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/tags/story/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/categories/story/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://calvinwan0101.github.io/contact/</loc>
     <xhtml:link
                 rel="alternate"
