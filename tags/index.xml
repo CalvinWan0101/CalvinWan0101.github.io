@@ -21,6 +21,24 @@
     </item>
     
     <item>
+      <title>not funny</title>
+      <link>https://example.com/tags/not-funny/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/not-funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>not relax</title>
+      <link>https://example.com/tags/not-relax/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/not-relax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>relax</title>
       <link>https://example.com/tags/relax/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
