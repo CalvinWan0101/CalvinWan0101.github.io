@@ -17,7 +17,8 @@
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://calvinwan0101.github.io/cn/blog/sudoku/</guid>
-      <description>数独C++想法 有一天我去看了上清大资工同学的备审
+      <description>ㅤㅤㅤ
+数独C++想法 有一天我去看了上清大资工同学的备审
 奖项跟参赛记录多到哭出来啊，是完全无法触及的级别
 但是他有提到他有用Excel写一个2*2的数独
 刚好我最近在读关于dfs的东西，想说不然来玩玩看
@@ -39,7 +40,8 @@ for (int i = 0; i &amp;lt; 9; ++i) //当發现y相同时有点的值和代入的
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://calvinwan0101.github.io/cn/blog/apcs/</guid>
-      <description>APCS(大学程式设计先修检定) 在APCS的观念题中有一种很麻烦的题目是 code tracing
+      <description>ㅤㅤ
+APCS(大学程式设计先修检定) 在APCS的观念题中有一种很麻烦的题目是 code tracing
 一开始想说应该还好，毕竟也不是没有看过别人的程式码，应该跟着跑一次就好了
 天真如我
 一时找不到之前绕到头晕掉的题目，随便举一个考古题的例子，还算简单的
