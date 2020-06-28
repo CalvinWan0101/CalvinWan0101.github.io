@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="tw">
+  <head>
+  <meta charset="utf-8">
+<title>數獨(使用C&#43;&#43;) - CALVIN BLOG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="數獨(使用C&#43;&#43;)">
+<meta itemprop="description" content="回溯法還是深度優先搜尋？其實我也不知道">
+<meta itemprop="datePublished" content="2020-06-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="718">
+<meta itemprop="image" content="https://calvinwan0101.github.io/img/photo/1003363.jpg">
+
+
+
+<meta itemprop="keywords" content="演算法,code," /><meta property="og:title" content="數獨(使用C&#43;&#43;)" />
+<meta property="og:description" content="回溯法還是深度優先搜尋？其實我也不知道" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://calvinwan0101.github.io/tw/blog/sudoku/" />
+<meta property="og:image" content="https://calvinwan0101.github.io/img/photo/1003363.jpg" />
+<meta property="article:published_time" content="2020-06-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://calvinwan0101.github.io/img/photo/1003363.jpg"/>
+
+<meta name="twitter:title" content="數獨(使用C&#43;&#43;)"/>
+<meta name="twitter:description" content="回溯法還是深度優先搜尋？其實我也不知道"/>
+<meta name="twitter:site" content="@CalvinWan0101"/>
+<link rel="stylesheet" href="/css/bundle.min.759e3848ea529eef056dab665b241e2af569e601ab80f68f8d4a4d002a155dd4.css" integrity="sha256-dZ44SOpSnu8FbatmWyQeKvVp5gGrgPaPjUpNACoVXdQ="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/tw/" class="nav">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          
+            <a href="/tw/" class="nav link"><i class='fas fa-home'></i> 主頁</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tw/about/" class="nav link"><i class='far fa-id-card'></i> 關於</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tw/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tw/categories/" class="nav link"><i class='fas fa-sitemap'></i> 分類</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tw/contact/" class="nav link"><i class='far fa-envelope'></i> 聯繫</a>
+          
+        
+      
+      <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="tw">tw</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="tw" class="nav link active">中文-繁体 (tw)</a>
+  
+      <a href="https://calvinwan0101.github.io/blog/sudoku/" lang="en" class="nav link">English (en)</a>
+    
+      <a href="https://calvinwan0101.github.io/cn/blog/sudoku/" lang="cn" class="nav link">中文-简体 (cn)</a>
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29&amp;url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;title=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;title=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;description=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Calvin&amp;body=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/tw/"><img src="https://calvinwan0101.github.io/img/main/%E8%AE%8A%E5%B0%8F%E4%BA%86.jpg" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>CALVIN BLOG</h1>
+  </header>
+  <main>
+    <p>Sometimes the perfect person for you is the one you least expect.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/CalvinWan0101" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/100009140283070" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/calvinwan0101" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/CalvinWan0101" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:CalvinCycle8787@gmial.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/tw/blog/sudoku/">數獨(使用C&#43;&#43;)</a></h2>
+    
+    
+      <p>回溯法還是深度優先搜尋？其實我也不知道</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-06-28 00:00:00 &#43;0000 UTC">
+      June 28, 2020
+    </time>
+    <span class="author">Calvin</span>
+    
+      <p>4 minute read</p>
+    
+  </div>
+</header>
+
+    <section id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29&amp;url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;title=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;title=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f&amp;description=%e6%95%b8%e7%8d%a8%28%e4%bd%bf%e7%94%a8C%2b%2b%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Calvin&amp;body=https%3a%2f%2fcalvinwan0101.github.io%2ftw%2fblog%2fsudoku%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </section>
+    
+  <a href="/tw/blog/sudoku/" class="image featured">
+    
+      <img src="https://calvinwan0101.github.io/img/photo/1003363.jpg" alt="">
+    
+  </a>
+
+
+    <div class="content">
+      <h2 id="數獨c想法">數獨C++想法</h2>
+<p>有一天我去看了上清大資工同學的備審</p>
+<p>獎項跟參賽記錄多到哭出來啊，是完全無法觸及的級別</p>
+<p>但是他有提到他有用Excel寫一個2*2的數獨</p>
+<p>剛好我最近在讀關於dfs的東西，想說不然來玩玩看</p>
+<p>邏輯應該差不多，就是比較不那麼暴力的窮舉</p>
+<h3 id="正式開始">正式開始</h3>
+<p>先建立一個全域的int陣列當做map</p>
+<p><code>int map[9][9]</code></p>
+<p>然後建立一個用來檢測輸入的數字是否符合條件的函數</p>
+<p>條件如下:</p>
+<table>
+<thead>
+<tr>
+<th>範圍</th>
+<th>條件A</th>
+<th>條件B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x相同的9個格子</td>
+<td>格子內的數字互不相等</td>
+<td>數字為1~9</td>
+</tr>
+<tr>
+<td>y相同的9個格子</td>
+<td>格子內的數字互不相等</td>
+<td>數字為1~9</td>
+</tr>
+<tr>
+<td>劃分在同一個小格子的9個格子</td>
+<td>格子內的數字互不相等</td>
+<td>數字為1~9</td>
+</tr>
+</tbody>
+</table>
+<p>這邊的<code>count</code>是跑到第count格的意思</p>
+<p>從第1格開始跑，到第(9*9)格結束</p>
+<p>先計算當前count值下的坐標</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+</code></pre></div><p>檢查y相同的狀況，</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+	<span style="color:#75715e">//當發現y相同時有點的值和代入的值相同時就return false
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (map[y][i] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> x)
+		<span style="color:#66d9ef">return</span> false;
+</code></pre></div><p>檢查x相同的狀況</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+<span style="color:#75715e">//當發現x相同時有點的值和代入的值相同時就return false
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (map[i][x] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y)
+		<span style="color:#66d9ef">return</span> false;
+</code></pre></div><p>檢查同一小格的狀況</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">//sx,sy指小格子的坐標
+</span><span style="color:#75715e">//x,y的範圍是0~8,至於公式可以自己拿紙筆推推看
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> sy <span style="color:#f92672">=</span> y <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#66d9ef">int</span> sx <span style="color:#f92672">=</span> x <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> sy; i <span style="color:#f92672">&lt;</span> sy <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>i)
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> sx; k <span style="color:#f92672">&lt;</span> sx <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>k)
+		<span style="color:#66d9ef">if</span> (map[i][k] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y <span style="color:#f92672">&amp;&amp;</span> k <span style="color:#f92672">!=</span> x)
+			<span style="color:#66d9ef">return</span> false;
+</code></pre></div><p>當到了這邊就代表前面都沒有return也就是這個值是沒問題的</p>
+<p>這時候就<code>return true;</code></p>
+<h1 id="heading"></h1>
+<p>完整的<code>Test</code>函數長這樣</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">Test</span>(<span style="color:#66d9ef">int</span> count)
+{
+	<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#75715e">//y相同
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">if</span> (map[y][i] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> x)
+			<span style="color:#66d9ef">return</span> false;
+	<span style="color:#75715e">//x相同
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">if</span> (map[i][x] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y)
+			<span style="color:#66d9ef">return</span> false;
+	<span style="color:#75715e">//同一小格
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> sy <span style="color:#f92672">=</span> y <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+	<span style="color:#66d9ef">int</span> sx <span style="color:#f92672">=</span> x <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> sy; i <span style="color:#f92672">&lt;</span> sy <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> sx; k <span style="color:#f92672">&lt;</span> sx <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>k)
+			<span style="color:#66d9ef">if</span> (map[i][k] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y <span style="color:#f92672">&amp;&amp;</span> k <span style="color:#f92672">!=</span> x)
+				<span style="color:#66d9ef">return</span> false;
+	<span style="color:#66d9ef">return</span> true;
+}
+</code></pre></div><p>然後是BackTracking的部分了(我這樣玩好像有dfs的味道，但我不確定是不是dfs)</p>
+<p>我把這個函數取名叫<code>guess</code></p>
+<p>第一步先判斷是不是走到終點了</p>
+<p>也就是count的值是否為81</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">if</span> (count <span style="color:#f92672">==</span> <span style="color:#ae81ff">81</span>)
+	<span style="color:#75715e">//如果是81就把map整個印出來再return
+</span><span style="color:#75715e"></span>    {
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>j)
+				cout <span style="color:#f92672">&lt;&lt;</span> map[i][j] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+			cout <span style="color:#f92672">&lt;&lt;</span> endl;
+		}
+		<span style="color:#66d9ef">return</span>;
+	}
+</code></pre></div><p>確定了現在走的點不是最後一個點之後</p>
+<p>這裡一樣要計算count當下x,y的值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+</code></pre></div><p>這時候分成兩種情況</p>
+<table>
+<thead>
+<tr>
+<th>情況</th>
+<th>動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>當前位置沒有數字(map[y][x]==0)</td>
+<td>開始在這一格做嘗試</td>
+</tr>
+<tr>
+<td>當前位置已有數字(map[y][x]!=0)</td>
+<td>直接呼叫下一層</td>
+</tr>
+</tbody>
+</table>
+<p>這邊好像就比較有dfs的味道了</p>
+<p>一個值試過之後當前格再重置為0繼續試下一個值</p>
+<p>當前位置沒有數字時:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">if</span> (map[y][x] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+	{
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#75715e">//給值標記已經使用過
+</span><span style="color:#75715e"></span>			map[y][x] <span style="color:#f92672">=</span> i;
+			<span style="color:#75715e">//當檢測合格的時候就再進到下一層
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (Test(count))
+				guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		<span style="color:#75715e">//重置該點數值
+</span><span style="color:#75715e"></span>		map[y][x] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	}
+</code></pre></div><p>當前位置有數字時：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">else</span>
+  <span style="color:#75715e">//直接進入下一層
+</span><span style="color:#75715e"></span>  guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><p>整個<code>guess</code>函數長這樣：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">guess</span>(<span style="color:#66d9ef">int</span> count)
+{
+	<span style="color:#66d9ef">if</span> (count <span style="color:#f92672">==</span> <span style="color:#ae81ff">81</span>)
+	{
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>j)
+				cout <span style="color:#f92672">&lt;&lt;</span> map[i][j] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+			cout <span style="color:#f92672">&lt;&lt;</span> endl;
+		}
+		<span style="color:#66d9ef">return</span>;
+	}
+	<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">if</span> (map[y][x] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+	{
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#75715e">//給值標記已經使用過
+</span><span style="color:#75715e"></span>			map[y][x] <span style="color:#f92672">=</span> i;
+			<span style="color:#66d9ef">if</span> (Test(count))
+				guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		<span style="color:#75715e">//重置該點數值
+</span><span style="color:#75715e"></span>		map[y][x] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	}
+	<span style="color:#66d9ef">else</span>
+		guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>最後一步就是main函數啦~</p>
+<p>就只有輸入map的值然後guess(0)</p>
+<h3 id="注意這邊輸入格式空格以0代替">注意這邊輸入格式空格以0代替</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>j)
+			cin <span style="color:#f92672">&gt;&gt;</span> map[i][j];
+	cout <span style="color:#f92672">&lt;&lt;</span> endl;
+	guess(<span style="color:#ae81ff">0</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>我是在圖書館把這一串給寫完的</p>
+<p>寫完之後我就坐在那邊開外掛完了半小時數獨(剛好IG廣告就是數獨我嚇到)</p>
+<p>完整的程式碼：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> map[<span style="color:#ae81ff">9</span>][<span style="color:#ae81ff">9</span>];
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">Test</span>(<span style="color:#66d9ef">int</span> count)
+{
+	<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#75715e">//同一行
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">if</span> (map[y][i] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> x)
+			<span style="color:#66d9ef">return</span> false;
+	<span style="color:#75715e">//同一列
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">if</span> (map[i][x] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y)
+			<span style="color:#66d9ef">return</span> false;
+	<span style="color:#75715e">//同一小格
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> sy <span style="color:#f92672">=</span> y <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+	<span style="color:#66d9ef">int</span> sx <span style="color:#f92672">=</span> x <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> sy; i <span style="color:#f92672">&lt;</span> sy <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> sx; k <span style="color:#f92672">&lt;</span> sx <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; <span style="color:#f92672">++</span>k)
+			<span style="color:#66d9ef">if</span> (map[i][k] <span style="color:#f92672">==</span> map[y][x] <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">!=</span> y <span style="color:#f92672">&amp;&amp;</span> k <span style="color:#f92672">!=</span> x)
+				<span style="color:#66d9ef">return</span> false;
+	<span style="color:#66d9ef">return</span> true;
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">guess</span>(<span style="color:#66d9ef">int</span> count)
+{
+	<span style="color:#66d9ef">if</span> (count <span style="color:#f92672">==</span> <span style="color:#ae81ff">81</span>)
+	{
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>j)
+				cout <span style="color:#f92672">&lt;&lt;</span> map[i][j] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+			cout <span style="color:#f92672">&lt;&lt;</span> endl;
+		}
+		<span style="color:#66d9ef">return</span>;
+	}
+	<span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> count <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> count <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>;
+	<span style="color:#66d9ef">if</span> (map[y][x] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+	{
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		{
+			<span style="color:#75715e">//給值標記已經使用過
+</span><span style="color:#75715e"></span>			map[y][x] <span style="color:#f92672">=</span> i;
+			<span style="color:#66d9ef">if</span> (Test(count))
+				guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+		}
+		<span style="color:#75715e">//重置該點數值
+</span><span style="color:#75715e"></span>		map[y][x] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	}
+	<span style="color:#66d9ef">else</span>
+		guess(count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+}
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>i)
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9</span>; <span style="color:#f92672">++</span>j)
+			cin <span style="color:#f92672">&gt;&gt;</span> map[i][j];
+	cout <span style="color:#f92672">&lt;&lt;</span> endl;
+	guess(<span style="color:#ae81ff">0</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div>
+    </div>
+    <footer>
+      <ul class="stats">
+  <li class="categories">
+    <ul>
+    
+      
+        
+          <li><a class="article-terms-link" href="/tw/categories/%e5%af%ab%e7%a8%8b%e5%bc%8f/">寫程式</a></li>
+        
+      
+    
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+    
+      
+        
+          <li><a class="article-terms-link" href="/tw/tags/%e6%bc%94%e7%ae%97%e6%b3%95/">演算法</a></li>
+        
+          <li><a class="article-terms-link" href="/tw/tags/code/">code</a></li>
+        
+      
+    
+    </ul>
+  </li>
+</ul>
+
+    </footer>
+  </article>
+  
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "calvinwan0101" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
+
+  <div class="pagination">
+  
+    <a href="/tw/blog/apcs/" class="button"><div class="previous"><div>關於APCS的抱怨</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/tw/blog/sudoku/" class="image featured">
+    
+      <img src="https://calvinwan0101.github.io/img/photo/1003363.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="/tw/blog/sudoku/">數獨(使用C&#43;&#43;)</a></h2>
+          <time class="published" datetime="">June 28, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/tw/blog/apcs/" class="image featured">
+    
+      <img src="https://calvinwan0101.github.io/img/photo/1018912.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="/tw/blog/apcs/">關於APCS的抱怨</a></h2>
+          <time class="published" datetime="">June 27, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/tw/blog/orgin/" class="image featured">
+    
+      <img src="https://calvinwan0101.github.io/img/photo/169.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="/tw/blog/orgin/">Blog 的起源</a></h2>
+          <time class="published" datetime="">June 26, 2020</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/tw/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/tw/categories/%E5%AF%AB%E7%A8%8B%E5%BC%8F/">寫程式<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/tw/categories/%E6%95%85%E4%BA%8B/">故事<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>Dream to be a programmer</p>
+      <footer>
+        <a href="/tw/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/CalvinWan0101" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/100009140283070" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/calvinwan0101" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/CalvinWan0101" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:CalvinCycle8787@gmial.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        CALVIN BLOG
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.3264c9d3cbc3c50f0c64ab5eea5ec671469aa4bc4c20b276f4f385bda74c0a02.js" integrity="sha256-MmTJ08vDxQ8MZKte6l7GcUaapLxMILJ29POFvadMCgI="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-171045162-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>

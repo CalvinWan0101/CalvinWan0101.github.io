@@ -6,10 +6,32 @@
     <description>Recent content in Blog on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://calvinwan0101.github.io/cn/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数独（使用C&#43;&#43;)</title>
+      <link>https://calvinwan0101.github.io/cn/blog/sudoku/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://calvinwan0101.github.io/cn/blog/sudoku/</guid>
+      <description>数独C++想法 有一天我去看了上清大资工同学的备审
+奖项跟参赛记录多到哭出来啊，是完全无法触及的级别
+但是他有提到他有用Excel写一个2*2的数独
+刚好我最近在读关于dfs的东西，想说不然来玩玩看
+逻辑应该差不多，就是比较不那麽暴力的穷举
+正式开始 先建立一个全域的int阵列当做map
+int map[9][9]
+然后建立一个用来检测输入的数字是否符合条件的函数
+条件如下:
+   范围 条件A 条件B     x相同的9个格子 格子内的数字互不相等 数字为1~9   y相同的9个格子 格子内的数字互不相等 数字为1~9   划分在同一个小格子的9个格子 格子内的数字互不相等 数字为1~9    这边的count是跑到第count格的意思
+从第1格开始跑，到第(9*9)格结束
+先计算当前count值下的坐标
+int y = count / 9; int x = count % 9; 检查y相同的状况，
+for (int i = 0; i &amp;lt; 9; ++i) //当發现y相同时有点的值和代入的值相同时就return false  if (map[y][i] == map[y][x] &amp;amp;&amp;amp; i !</description>
+    </item>
     
     <item>
       <title>关于APCS的抱怨</title>

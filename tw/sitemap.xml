@@ -3,28 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://calvinwan0101.github.io/tw/tags/apcs/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://calvinwan0101.github.io/tags/apcs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/tags/apcs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/tags/apcs/"
-                />
-  </url>
-  
-  <url>
     <loc>https://calvinwan0101.github.io/tw/blog/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,7 +24,7 @@
   
   <url>
     <loc>https://calvinwan0101.github.io/tw/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +44,7 @@
   
   <url>
     <loc>https://calvinwan0101.github.io/tw/categories/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -84,7 +64,7 @@
   
   <url>
     <loc>https://calvinwan0101.github.io/tw/tags/code/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -104,7 +84,7 @@
   
   <url>
     <loc>https://calvinwan0101.github.io/tw/tags/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -124,7 +104,62 @@
   
   <url>
     <loc>https://calvinwan0101.github.io/tw/categories/%E5%AF%AB%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/tw/blog/sudoku/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/blog/sudoku/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/blog/sudoku/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/blog/sudoku/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/tw/tags/%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/%E6%BC%94%E7%AE%97%E6%B3%95/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/%E6%BC%94%E7%AE%97%E6%B3%95/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/tw/tags/apcs/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/tags/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/tags/apcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/tags/apcs/"
+                />
   </url>
   
   <url>

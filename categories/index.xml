@@ -6,10 +6,19 @@
     <description>Recent content in Categories on CALVIN BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://calvinwan0101.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Interesting</title>
+      <link>https://calvinwan0101.github.io/categories/interesting/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://calvinwan0101.github.io/categories/interesting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CODING</title>

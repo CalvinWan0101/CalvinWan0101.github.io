@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>演算法 on CALVIN BLOG</title>
+    <link>https://calvinwan0101.github.io/tw/tags/%E6%BC%94%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 演算法 on CALVIN BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://calvinwan0101.github.io/tw/tags/%E6%BC%94%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>數獨(使用C&#43;&#43;)</title>
+      <link>https://calvinwan0101.github.io/tw/blog/sudoku/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://calvinwan0101.github.io/tw/blog/sudoku/</guid>
+      <description>數獨C++想法 有一天我去看了上清大資工同學的備審
+獎項跟參賽記錄多到哭出來啊，是完全無法觸及的級別
+但是他有提到他有用Excel寫一個2*2的數獨
+剛好我最近在讀關於dfs的東西，想說不然來玩玩看
+邏輯應該差不多，就是比較不那麼暴力的窮舉
+正式開始 先建立一個全域的int陣列當做map
+int map[9][9]
+然後建立一個用來檢測輸入的數字是否符合條件的函數
+條件如下:
+   範圍 條件A 條件B     x相同的9個格子 格子內的數字互不相等 數字為1~9   y相同的9個格子 格子內的數字互不相等 數字為1~9   劃分在同一個小格子的9個格子 格子內的數字互不相等 數字為1~9    這邊的count是跑到第count格的意思
+從第1格開始跑，到第(9*9)格結束
+先計算當前count值下的坐標
+int y = count / 9; int x = count % 9; 檢查y相同的狀況，
+for (int i = 0; i &amp;lt; 9; ++i) //當發現y相同時有點的值和代入的值相同時就return false  if (map[y][i] == map[y][x] &amp;amp;&amp;amp; i !</description>
+    </item>
+    
+  </channel>
+</rss>
