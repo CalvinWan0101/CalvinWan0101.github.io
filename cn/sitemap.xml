@@ -123,26 +123,6 @@
   </url>
   
   <url>
-    <loc>https://calvinwan0101.github.io/cn/about/</loc>
-    <lastmod>2020-06-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://calvinwan0101.github.io/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tw"
-                href="https://calvinwan0101.github.io/tw/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://calvinwan0101.github.io/cn/about/"
-                />
-  </url>
-  
-  <url>
     <loc>https://calvinwan0101.github.io/cn/blog/apcs/</loc>
     <lastmod>2020-06-27T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -184,6 +164,26 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://calvinwan0101.github.io/cn/blog/orgin/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://calvinwan0101.github.io/cn/about/</loc>
+    <lastmod>2020-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://calvinwan0101.github.io/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tw"
+                href="https://calvinwan0101.github.io/tw/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://calvinwan0101.github.io/cn/about/"
                 />
   </url>
   
