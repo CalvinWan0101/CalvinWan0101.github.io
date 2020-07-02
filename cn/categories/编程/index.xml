@@ -46,7 +46,7 @@ APCS(大学程式设计先修检定) 在APCS的观念题中有一种很麻烦的
 天真如我
 一时找不到之前绕到头晕掉的题目，随便举一个考古题的例子，还算简单的
 若以F(15)呼叫右侧F()函式，总共会印出几行数字？
-void F(int n) { printf(&amp;quot;%d\n&amp;quot;,n); if(n%2==1)&amp;amp;&amp;amp;(n&amp;gt;1) { return F(5*n+1) } else { if(n%2==0) return F(n/2); } } 解题思路：
+void F(int n) { printf(&amp;#34;%d\n&amp;#34;,n); if(n%2==1)&amp;amp;&amp;amp;(n&amp;gt;1) { return F(5*n+1) } else { if(n%2==0) return F(n/2); } } 解题思路：
 当函式输进一个变数n,此时分为两种状况
    条件 动作     n为偶数 回传F(n/2)   n不为偶数 回传F(5*n+1)    这时候n的变化如下
    印出次数 此时的n值     01 15   02 76   03 38   04 19   05 96   06 48   07 24   08 12   09 06   10 03   11 16   12 08   13 04   14 02   15 01    Answer == 15</description>
