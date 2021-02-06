@@ -3,9 +3,7 @@ Calvin Blog架設
 
  ## Calvin Blog 的起源
 
-前幾天不知道GitHub如果作為個人申請備審資料應該怎麼分類的我遊走在ptt的SeniorHigh版中
-
-無意中看到一個清大資工備取的備審 [點這裡](https://www.ptt.cc/bbs/SENIORHIGH/M.1557327531.A.622.html)
+前幾天不知道GitHub如果作為個人申請備審資料應該怎麼分類的我遊走在ptt的SeniorHigh版中，無意中看到一個清大資工備取的備審 [點這裡](https://www.ptt.cc/bbs/SENIORHIGH/M.1557327531.A.622.html)
 
 晚上拿去就和貓貓大神分享了
 
